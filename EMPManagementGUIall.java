@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 
 // MAIN GUI APPLICATION CLASS :3
-public class EmployeeManagementGUI extends JFrame {
+public class EMPManagemental extends JFrame {
     // Central Data Structures (ArrayList & HashMap)
     private final ArrayList<Employee> employeeList = new ArrayList<>();
     private final ArrayList<PayrollRecord> payrollRecords = new ArrayList<>();
@@ -39,7 +39,7 @@ public class EmployeeManagementGUI extends JFrame {
     private static final File PAYROLL_FILE = new File("Employee Generator Payslip.txt");
     private static final File EMPLOYEE_FILE = new File("EmployeeFILES.txt");
 
-    public EmployeeManagementGUI() {
+    public EMPManagemental() {
         setTitle("Employee Management System");
         setSize(900, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -210,11 +210,11 @@ public class EmployeeManagementGUI extends JFrame {
         return panel;
 
     }
-// receipt instead of table row kay wala lang
+// receipt instead of table row kay mas nice Hahahaha
     private void addPayrollReceipt(PayrollRecord record) { 
         Object[] rowData = record.toRowData();
         String receiptText = String.format(
-                "             PAYROLL RECEIPT%n" +
+                "         PAYROLL RECEIPT%n" +
                         "--------------------------------%n" +
                         "Employee ID:      %s%n" +
                         "Employee Name:    %s%n" +
@@ -524,7 +524,7 @@ public class EmployeeManagementGUI extends JFrame {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            EmployeeManagementGUI gui = new EmployeeManagementGUI();
+            EMPManagemental gui = new EMPManagemental();
             gui.setVisible(true);
         });
     }
